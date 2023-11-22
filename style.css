@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    color: #DD1437;
 }
 
 html,body{
@@ -12,13 +14,18 @@ html,body{
 #main{
     width: 100%;
     height: 100vh;
-    background-color: #151515;
+    /* background-color: #151515; */
 }
 
 #back{
     width: 100%;
     height: 100vh;
     /* background-color: #d91111; */
+}
+#back img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 #top{
@@ -27,16 +34,17 @@ html,body{
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: #1515156f;
+    /* background-color: #1515156f; */
 
 }
 
 #workingarea{
+    position: relative;
     margin: 0 auto;
     width: 80%;
     height: 100vh;
     max-width: 1920px;
-    border: 1px solid red;
+    /* border: 1px solid red;  */
 }
 
 #nav{
@@ -51,6 +59,7 @@ html,body{
 
 #nav img{
     height: 100px;
+    z-index: 1;
 }
 #nright , #nleft{
     display: flex;
@@ -59,7 +68,7 @@ html,body{
 
 #nav a{
     color: #DD1437;
-    font-family: 'Gilroy';
+    /* font-family: 'Gilroy'; */
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -67,6 +76,113 @@ html,body{
     margin: 20px;
     font-weight: bold;
     word-spacing: 5px;
+    font-weight: 600;
     /* gap: 50px; */
+    z-index: 1;
 }
 
+#content{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0% , -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* height: 100px; */
+    /* background-color: burlywood; */
+}
+
+#lcontent{
+    min-width: 50%;
+    /* height: 100px; */
+    /* background-color: chartreuse; */
+}
+
+#rcontent{
+    min-width: 50%;
+    height: 100px;
+    /* background-color: rgb(255, 0, 195); */
+}
+
+#lcontent .elem {
+    height: 39vh;
+}
+
+#lcontent .elem h1{
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 5vw;
+}
+
+#lcontent .elem h3{
+    padding: 40px 0px;
+    font-size: 2vw;
+}
+
+#lcontent button{
+    background-color: #DD1437;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    padding: 1vw 2vw;
+    border: none;
+    border-radius: 2px;
+    font-size: 1vw;
+    margin: 15px 0px;
+    text-transform: uppercase;
+    z-index: 1;
+
+}
+
+#rcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#rcontent img{
+    height: 3vw;
+    margin-top: 50vh;
+}
+
+
+#PizzaList{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+#PizzaList video{
+    opacity: .1;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 100%;
+    height: 100%;
+}
+
+#ptext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 9999;
+}
+
+#ptext button{
+    padding: 1vw 2vw;
+    font-size: 1vw;
+    text-transform: capitalize;
+    margin-top: 1px;
+    font-weight: 700;
+    border-radius: 100px;
+    background-color: #fff;
+    border: 1px #c6c6c6;
+    color: #6f6f6f;
+}
